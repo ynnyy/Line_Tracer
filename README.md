@@ -6,12 +6,12 @@
 
 센서를 이용하여 바닥의 라인을 인식하여 따라가는 로봇의 알고리즘이다.
 ---------------------------------------
-
 # :pushpin:Project video
 
 youtube :
 ---------------------------------------
 # :pushpin:Project Block diagram
+
 블럭도
 ------------------------------------
 # :pushpin:implementation result
