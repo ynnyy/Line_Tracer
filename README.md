@@ -5,5 +5,5 @@ A robot that uses a sensor to recognize and follow the line on the floor
 
 # :pushpin:Project Description
 
-센서를 이용하여 바닥의 라인을 인식하여 따라가는 로봇의 알고리즘이다.
+**센서를 이용하여 바닥의 라인을 인식하여 따라가는 로봇의 알고리즘이다.**
 
