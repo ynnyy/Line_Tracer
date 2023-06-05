@@ -12,7 +12,7 @@ youtube :
 ---------------------------------------
 # :pushpin:Project Block diagram
 
-![image](https://github.com/yn0212/Line_Tracer/assets/105347300/57250ce8-7f05-4864-ac0c-d270a8442454)
+![image](https://github.com/yn0212/Line_Tracer/assets/105347300/172b0acb-b6b5-48fc-a8ab-43a42ac28d9c)
 
 ------------------------------------
 # :pushpin:implementation result
