@@ -12,7 +12,8 @@ youtube :
 ---------------------------------------
 # :pushpin:Project Block diagram
 
-블럭도
+![image](https://github.com/yn0212/Line_Tracer/assets/105347300/57250ce8-7f05-4864-ac0c-d270a8442454)
+
 ------------------------------------
 # :pushpin:implementation result
 구현 결과
