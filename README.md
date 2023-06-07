@@ -8,6 +8,13 @@
 ---------------------------------------
 # :pushpin:Project video
 
+
+
+https://github.com/yn0212/Line_Tracer/assets/105347300/cbe89a86-d829-45f9-adf3-2f38d5a05ce8
+
+
+
+
 youtube : https://www.youtube.com/watch?v=nNs2scehn_U
 ---------------------------------------
 # :pushpin:Project Block diagram
