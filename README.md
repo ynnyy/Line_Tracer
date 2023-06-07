@@ -10,7 +10,12 @@
 
 
 
-https://github.com/yn0212/Line_Tracer/assets/105347300/cbe89a86-d829-45f9-adf3-2f38d5a05ce8
+
+https://github.com/yn0212/Line_Tracer/assets/105347300/f28a7e96-58c3-497c-a80d-9f6f746be691
+
+
+
+
 
 
 
