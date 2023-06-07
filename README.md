@@ -8,7 +8,7 @@
 ---------------------------------------
 # :pushpin:Project video
 
-
+구현 결과
 https://github.com/yn0212/Line_Tracer/assets/105347300/f28a7e96-58c3-497c-a80d-9f6f746be691
 
 
@@ -21,14 +21,5 @@ youtube : https://www.youtube.com/watch?v=nNs2scehn_U
 ---------------------------------------
 # :pushpin:Project Block diagram
 
-![image](https://github.com/yn0212/Line_Tracer/assets/105347300/13aa62d4-8c10-4804-8d9a-c0635d68f61d)
+![image](https://github.com/yn0212/Line_Tracer/assets/105347300/99660ac3-7ddf-4f63-9b2a-a6e253e73f57)
 
-
-------------------------------------
-# :pushpin:implementation result
-구현 결과
-
-----------------------------------
-# :pushpin:Project algorithm
-
---------------------------------
