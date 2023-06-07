@@ -8,11 +8,11 @@
 ---------------------------------------
 # :pushpin:Project video
 
-youtube :
+youtube : https://www.youtube.com/watch?v=nNs2scehn_U
 ---------------------------------------
 # :pushpin:Project Block diagram
 
-![image](https://github.com/yn0212/Line_Tracer/assets/105347300/b65f9967-b27d-4acc-bd62-454002877a77)
+![image](https://github.com/yn0212/Line_Tracer/assets/105347300/13aa62d4-8c10-4804-8d9a-c0635d68f61d)
 
 
 ------------------------------------
