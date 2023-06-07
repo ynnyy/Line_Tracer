@@ -9,18 +9,15 @@
 # :pushpin:Project video
 
 
-
-
 https://github.com/yn0212/Line_Tracer/assets/105347300/f28a7e96-58c3-497c-a80d-9f6f746be691
 
 
-
-
-
-
-
-
 youtube : https://www.youtube.com/watch?v=nNs2scehn_U
+---------------------------------------------------------
+# :pushpin:Project function
+
+![image](https://github.com/yn0212/Line_Tracer/assets/105347300/f29ebf2a-774f-4d27-a44c-5762e487f594)
+
 ---------------------------------------
 # :pushpin:Project Block diagram
 
