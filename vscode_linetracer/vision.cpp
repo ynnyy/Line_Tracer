@@ -70,12 +70,12 @@ Mat line_detect(Mat frame, Point2f* prevLineCenter, Point2f* error_center) {
         double* d = centroids.ptr<double>(lineLabel);
         line_center = Point2d(d[0], d[1]);
 
-        // if (distance(line_center, *prevLineCenter) > 50) {
-        //     line_center = *prevLineCenter;
-        // }
-        if (abs((*prevLineCenter).x - line_center.x) > 150) {
-            line_center = *prevLineCenter;
-        }
+         if (distance(line_center, *prevLineCenter) > 100) {
+             line_center = *prevLineCenter;
+         }
+        //if (abs((*prevLineCenter).x - line_center.x) > 100) {
+        //    line_center = *prevLineCenter;
+        //}
     }
     else {
         line_center = *prevLineCenter;
