@@ -7,22 +7,22 @@ using namespace std;
 using namespace cv;
 
 Mat ROI(Mat frame) {
-    //roi ¼±Á¤
+    //roi ì„ ì •
     Mat roi = frame(Rect(Point(0, frame.rows * 3 / 4), Point(frame.cols, frame.rows)));
-    // ±×·¹ÀÌ½ºÄÉÀÏ º¯È¯
+    // ê·¸ë ˆì´ìŠ¤ì¼€ì¼ ë³€í™˜
     Mat gray;
     cvtColor(roi, gray, cv::COLOR_BGR2GRAY);
-    //Æò±Õ°ª °è»ê
+    //í‰ê· ê°’ ê³„ì‚°
     Scalar meanvalue = mean(gray);
-    //°á°ú ¿µ»ó ÇÈ¼¿ °ª
+    //ê²°ê³¼ ì˜ìƒ í”½ì…€ ê°’
     Mat pixel_val = gray + (100 - meanvalue[0]);
-    //ÀÌÁøÈ­
+    //ì´ì§„í™”
     Mat thr;//220
     threshold(pixel_val, thr, 170, 255, THRESH_BINARY);
     return thr;
 }
 
-double distance(Point2f p1, Point2f p2) { //µÎ Á¡ »çÀÌÀÇ °Å¸®
+double distance(Point2f p1, Point2f p2) { //ë‘ ì  ì‚¬ì´ì˜ ê±°ë¦¬
     //cout << abs(sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y))) << endl;
     return abs(sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y)));
 }
@@ -36,24 +36,24 @@ Mat line_detect(Mat frame, Point2f* prevLineCenter, Point2f* error_center) {
     int cnt = connectedComponentsWithStats(frame, labels, stats, centroids);
     cvtColor(frame, cvt, COLOR_GRAY2BGR);
 
-    // ¶óÀÎ °´Ã¼ ¼±ÅÃ , ³ëÀÌÁî Á¦°Å
+    // ë¼ì¸ ê°ì²´ ì„ íƒ , ë…¸ì´ì¦ˆ ì œê±°
     int lineLabel = -1;
-    int minArea = 500;  // ÃÖ¼Ò ³ĞÀÌ ÀÓ°è°ª
-    int maxArea = 10000; // ÃÖ´ë ³ĞÀÌ ÀÓ°è°ª
+    int minArea = 500;  // ìµœì†Œ ë„“ì´ ì„ê³„ê°’
+    int maxArea = 10000; // ìµœëŒ€ ë„“ì´ ì„ê³„ê°’
     Point2f line_center;
     int max = 0, min = 0;
     vector<double> len;
     vector<Point> len_p;
     if (cnt > 1) {
-        cout << "°³¼ö" << cnt << endl;
+        cout << "ê°œìˆ˜" << cnt << endl;
         for (int i = 1; i < cnt; i++)
         {
             int* ptr = stats.ptr<int>(i);
-            //Point2f pt = Point2f(centroids.at<double>(i, 0), centroids.at<double>(i, 1)); // ¶óÀÎÀÇ ¹«°ÔÁß½É
+            //Point2f pt = Point2f(centroids.at<double>(i, 0), centroids.at<double>(i, 1)); // ë¼ì¸ì˜ ë¬´ê²Œì¤‘ì‹¬
 
             if (i == 1) { max = ptr[4]; }
             if (max <= ptr[4] && ptr[4] >= minArea) {
-                cout << "³ĞÀÌ" << ptr[4] << endl;
+                cout << "ë„“ì´" << ptr[4] << endl;
                 //*prevLineCenter = line_center;
                 max = ptr[4];
                 lineLabel = i;
@@ -64,12 +64,12 @@ Mat line_detect(Mat frame, Point2f* prevLineCenter, Point2f* error_center) {
         double* d = centroids.ptr<double>(lineLabel);
         line_center = Point2d(d[0], d[1]);
 
-        // if (distance(line_center, *prevLineCenter) > 50) {
-        //     line_center = *prevLineCenter;
-        // }
-        if (abs((*prevLineCenter).x - line_center.x) > 150) {
-            line_center = *prevLineCenter;
+        if (distance(line_center, *prevLineCenter) > 100) {
+             line_center = *prevLineCenter;
         }
+        //if (abs((*prevLineCenter).x - line_center.x) > 100) {
+        //    line_center = *prevLineCenter;
+        //}
     }
     else {
         line_center = *prevLineCenter;
